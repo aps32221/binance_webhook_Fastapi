@@ -1,0 +1,3 @@
+uvicorn
+binance-futures-connector
+fastapi
