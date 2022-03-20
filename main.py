@@ -1,5 +1,4 @@
 from datetime import datetime
-from turtle import position
 from typing import Optional
 from fastapi import FastAPI
 from pydantic import BaseModel
@@ -9,7 +8,6 @@ from binance.error import ClientError
 from binance.lib.utils import config_logging
 import config
 import json
-import asyncio
 import logging
 
 client = Futures()
