@@ -1,1 +1,1 @@
-web: guvicorn main:app --host=0.0.0.0
+web: gunicorn main:app --host=0.0.0.0
