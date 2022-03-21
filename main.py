@@ -37,7 +37,7 @@ def showAccWalletBalance():
 app = FastAPI()
 
 class Bar(BaseModel):
-    time: datetime
+    time: str
     open: float
     high: float
     low: float
@@ -57,7 +57,7 @@ class Strategy(BaseModel):
 
 class Payload(BaseModel):
     passphrase: str
-    time: datetime
+    time: str
     exchange: str
     ticker: str
     bar: Bar
