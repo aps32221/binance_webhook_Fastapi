@@ -50,9 +50,9 @@ class Strategy(BaseModel):
     order_contracts: float
     order_price: float
     order_id: str
-    market_position: float
+    market_position: str
     market_position_size: float
-    prev_market_position: float
+    prev_market_position: str
     prev_market_position_size: float
 
 class Payload(BaseModel):
