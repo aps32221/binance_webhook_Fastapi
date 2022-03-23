@@ -74,7 +74,7 @@ def webhook(payload: Payload):
     if payload.passphrase == config.PASSPHRASE:
         showAccWalletBalance()
         try:
-            response = client.new_order(symbol="ETHUSDT", side=payload.strategy.order_action.upper(), type="MARKET", quantity=payload.strategy.order_contracts, recvWindow=60000, timestamp=client.time())#, quantity=payload.strategy.order_contracts)
+            response = client.new_order(symbol=payload.ticker.upper(), side=payload.strategy.order_action.upper(), type="MARKET", quantity=payload.strategy.order_contracts, recvWindow=60000, timestamp=client.time())#, quantity=payload.strategy.order_contracts)
             logging.info(response)
         except ClientError as error:
             logging.error(f"Found error. status: {error.status_code},\n"+
