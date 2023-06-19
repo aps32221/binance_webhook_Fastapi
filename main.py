@@ -3,19 +3,19 @@ from typing import Optional
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-from binance.futures import Futures
+from binance.cm_futures import CMFutures
 from binance.error import ClientError
 from binance.lib.utils import config_logging
 import config
 import json
 import logging
 
-client = Futures()
+client = CMFutures()
 
 config_logging(logging, logging.DEBUG)
 
 logging.debug(client.time())
-client = Futures(key=config.API_KEY, secret=config.SECRET_KEY)
+client = CMFutures(key=config.API_KEY, secret=config.SECRET_KEY)
 
 AccInfo = None
 
